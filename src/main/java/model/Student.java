@@ -7,15 +7,17 @@ public class Student {
     private String name;
     private int age;
     private String subject;
+    private int studentId;
+
+    public Student(String name, int studentId) {
+        this.name = name;
+        this.studentId = studentId;
+    }
 
     public Student(String name, int age, String subject) {
         this.name = name;
         this.age = age;
         this.subject = subject;
-    }
-
-    public Student() {
-
     }
 
     public String getName() {
@@ -55,7 +57,7 @@ public class Student {
         return Objects.hash(name, age, subject);
     }
 
-    public String studentAttributes() {
-        return "Name of student: " + name + ", age: " + age + ", subject: " + subject;
+    public String toString() {
+        return "\nName of student: " + name + ", student ID: " + studentId;
     }
 }
